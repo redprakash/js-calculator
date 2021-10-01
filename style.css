@@ -12,6 +12,13 @@ body {
   height: 100vh;
 }
 
+.equal, .clear {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
 .container {
   display: grid;
   gap: 10px;
@@ -109,6 +116,9 @@ body {
 
 .equal {
   grid-area: equal;
-  color: white;
   background-color: #3a6aa1 !important;
+}
+
+.selected-operator {
+  background-color: #352c30;
 }

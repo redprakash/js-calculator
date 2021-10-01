@@ -12,6 +12,12 @@ body {
   align-items: center;
   height: 100vh;
 }
+%flexcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
 .container {
   display: grid;
   gap: 10px;
@@ -98,10 +104,14 @@ body {
 .clear {
   grid-area: clear;
   background-color: goldenrod;
+  @extend %flexcenter;
 }
 .equal {
   grid-area: equal;
+  @extend %flexcenter;
 
-  color: white;
   background-color: rgb(58, 106, 161) !important;
+}
+.selected-operator {
+  background-color: rgb(53, 44, 48);
 }
