@@ -12,6 +12,12 @@ body {
   align-items: center;
   height: 100vh;
 }
+%flexcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
 .container {
   display: grid;
   gap: 10px;
@@ -39,10 +45,11 @@ body {
   color: white;
   line-height: 80px;
   font-size: 60px;
-
+  overflow: hidden;
   padding: 6px;
   box-sizing: border-box;
-  display: flex;
+
+  text-align: right;
 }
 .add {
   grid-area: plus;
@@ -96,10 +103,15 @@ body {
 }
 .clear {
   grid-area: clear;
+  background-color: goldenrod;
+  @extend %flexcenter;
 }
 .equal {
   grid-area: equal;
+  @extend %flexcenter;
 
-  color: white;
   background-color: rgb(58, 106, 161) !important;
+}
+.selected-operator {
+  background-color: rgb(53, 44, 48);
 }
