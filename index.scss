@@ -39,10 +39,11 @@ body {
   color: white;
   line-height: 80px;
   font-size: 60px;
-
+  overflow: hidden;
   padding: 6px;
   box-sizing: border-box;
-  display: flex;
+
+  text-align: right;
 }
 .add {
   grid-area: plus;
@@ -96,6 +97,7 @@ body {
 }
 .clear {
   grid-area: clear;
+  background-color: goldenrod;
 }
 .equal {
   grid-area: equal;
