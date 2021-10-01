@@ -2,7 +2,7 @@
 
 This is a simple javascript calculator which does the basic calculations. The purpose of this project is to implement the learning from the class .
 
-### [Live Demp](https://redprakash.github.io/js-calculator/)
+### [Live Demo](https://redprakash.github.io/js-calculator/)
 
 ## Topics learned/practiced by developing this
 
