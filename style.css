@@ -42,6 +42,11 @@ body {
 .container button:hover {
   background-color: #e2f3ef;
 }
+.container button.num {
+  color: #4d4b4b;
+  font-family: Calculus;
+  font-size: 30px;
+}
 
 .display {
   display: inline-grid;
