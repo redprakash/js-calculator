@@ -60,6 +60,7 @@ equal.addEventListener('click', () => {
       myOperator,
       userNumberTwo
     );
+
     enableOperators();
   }
 });
