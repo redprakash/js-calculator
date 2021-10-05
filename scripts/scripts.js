@@ -11,16 +11,19 @@ for (let i = 0; i < pressedNum.length; i++) {
     if (userNumberOne) {
       userNumberTwo = calculatorDisplay.textContent;
     } else if (/[-+/x]/.test(calculatorDisplay.textContent)) {
-      userNumberOne = calculatorDisplay.textContent.slice(0, -1);
+      filteredDisplayNum = calculatorDisplay.textContent.slice(0, -1);
       myOperator = calculatorDisplay.textContent.slice(-1);
+      //this fuction disables the other operator when first one is selected
+      disableOperators();
+
+      userNumberOne = filteredDisplayNum;
+
       calculatorDisplay.textContent = '';
     }
   });
 }
-
 //Function to do the calculation
 const calculate = (numberOne, operator, numberTwo) => {
-
   switch (operator) {
     case '+': {
       return parseFloat(numberOne) + parseFloat(numberTwo);
@@ -38,7 +41,6 @@ const calculate = (numberOne, operator, numberTwo) => {
       alert('Sorry invalid operator or something is wrong');
   }
 };
-
 //Function to clear the display when AC pressed
 const allClear = document.querySelector('.clear');
 allClear.addEventListener('click', clearDisplay);
@@ -61,8 +63,23 @@ equal.addEventListener('click', () => {
     userNumberOne = 0;
     myOperator = '';
     userNumberTwo = 0;
-
     enableOperators();
-
   }
 });
+
+//enable the disabled button
+function enableOperators() {
+  allOperator.forEach((btn) => {
+    btn.disabled = false;
+    btn.classList.remove('selected-operator');
+  });
+}
+//disable button
+function disableOperators() {
+  allOperator.forEach((btn) => {
+    btn.disabled = true;
+    if (btn.textContent === myOperator) {
+      btn.classList.add('selected-operator');
+    }
+  });
+}
