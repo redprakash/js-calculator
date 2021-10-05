@@ -1,4 +1,8 @@
-$operator-color: skyblue;
+$operator-color: rgb(100, 146, 199);
+@font-face {
+  font-family: Calculus;
+  src: url(./fonts/CalculusOblique.otf) format('opentype');
+}
 
 * {
   margin: 0;
@@ -6,7 +10,7 @@ $operator-color: skyblue;
   box-sizing: border-box;
 }
 body {
-  background-color: rgb(231, 226, 226);
+  background: linear-gradient(135deg, #f1f9f5 50%, #c6d8d0 50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,24 +35,39 @@ body {
     'one two three equal'
     'zero deci clear equal';
   padding: 20px;
-  border: 1px solid rgb(180, 173, 173);
+
+  background-color: #323a34;
+  border-radius: 10px;
 
   button {
     font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f1f9f7;
+
+    &:hover {
+      background-color: #e2f3ef;
+    }
+    &.num {
+      color: rgb(77, 75, 75);
+      font-family: Calculus;
+      font-size: 30px;
+    }
   }
 }
 
 .display {
   display: inline-grid;
   grid-area: display;
-  background-color: rgb(0, 0, 0);
+  background-color: #000000;
+  border-radius: 10px;
   color: white;
   line-height: 80px;
   font-size: 60px;
   overflow: hidden;
-  padding: 6px;
+  padding: 6px 13px;
   box-sizing: border-box;
-
+  font-family: Calculus;
   text-align: right;
 }
 .add {
@@ -113,5 +132,5 @@ body {
   background-color: rgb(58, 106, 161) !important;
 }
 .selected-operator {
-  background-color: rgb(53, 44, 48);
+  background-color: #a9dbcf !important;
 }

@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Calculus;
+  src: url(./fonts/CalculusOblique.otf) format("opentype");
+}
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +9,7 @@
 }
 
 body {
-  background-color: #e7e2e2;
+  background: linear-gradient(135deg, #f1f9f5 50%, #c6d8d0 50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,43 +30,57 @@ body {
   grid-template-rows: repeat(6, 80px);
   grid-template-areas: "display display display display" "plus minus multiple division" "seven eight nine equal" "four five six equal" "one two three equal" "zero deci clear equal";
   padding: 20px;
-  border: 1px solid #b4adad;
+  background-color: #323a34;
+  border-radius: 10px;
 }
 .container button {
   font-size: 24px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f1f9f7;
+}
+.container button:hover {
+  background-color: #e2f3ef;
+}
+.container button.num {
+  color: #4d4b4b;
+  font-family: Calculus;
+  font-size: 30px;
 }
 
 .display {
   display: inline-grid;
   grid-area: display;
-  background-color: black;
+  background-color: #000000;
+  border-radius: 10px;
   color: white;
   line-height: 80px;
   font-size: 60px;
   overflow: hidden;
-  padding: 6px;
+  padding: 6px 13px;
   box-sizing: border-box;
+  font-family: Calculus;
   text-align: right;
 }
 
 .add {
   grid-area: plus;
-  color: skyblue;
+  color: #6492c7;
 }
 
 .minus {
   grid-area: minus;
-  color: skyblue;
+  color: #6492c7;
 }
 
 .multiple {
   grid-area: multiple;
-  color: skyblue;
+  color: #6492c7;
 }
 
 .division {
   grid-area: division;
-  color: skyblue;
+  color: #6492c7;
 }
 
 .seven {
@@ -120,5 +138,5 @@ body {
 }
 
 .selected-operator {
-  background-color: #352c30;
+  background-color: #a9dbcf !important;
 }
