@@ -18,7 +18,9 @@ for (let i = 0; i < pressedNum.length; i++) {
   });
 }
 
+//Function to do the calculation
 const calculate = (numberOne, operator, numberTwo) => {
+
   switch (operator) {
     case '+': {
       return parseFloat(numberOne) + parseFloat(numberTwo);
@@ -59,5 +61,8 @@ equal.addEventListener('click', () => {
     userNumberOne = 0;
     myOperator = '';
     userNumberTwo = 0;
+
+    enableOperators();
+
   }
 });
