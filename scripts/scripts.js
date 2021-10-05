@@ -23,7 +23,7 @@ for (let i = 0; i < pressedNum.length; i++) {
   });
 }
 //Function to do the calculation
-let calculate = (numberOne, operator, numberTwo) => {
+const calculate = (numberOne, operator, numberTwo) => {
   switch (operator) {
     case '+': {
       return parseFloat(numberOne) + parseFloat(numberTwo);
