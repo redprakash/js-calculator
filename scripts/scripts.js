@@ -23,7 +23,7 @@ for (let i = 0; i < pressedNum.length; i++) {
   });
 }
 //Function to do the calculation
-let result = function calculate(numberOne, operator, numberTwo) {
+let calculate = (numberOne, operator, numberTwo) => {
   switch (operator) {
     case '+': {
       return parseFloat(numberOne) + parseFloat(numberTwo);
@@ -55,11 +55,14 @@ equal.addEventListener('click', () => {
   if (calculatorDisplay.textContent === '') {
     alert('Nothing to calculate');
   } else {
-    calculatorDisplay.textContent = result(
+    calculatorDisplay.textContent = calculate(
       userNumberOne,
       myOperator,
       userNumberTwo
     );
+    userNumberOne = 0;
+    myOperator = '';
+    userNumberTwo = 0;
     enableOperators();
   }
 });
