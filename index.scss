@@ -44,8 +44,14 @@ body {
     border: none;
     border-radius: 10px;
     background-color: #f1f9f7;
+
     &:hover {
       background-color: #e2f3ef;
+    }
+    &.num {
+      color: rgb(77, 75, 75);
+      font-family: Calculus;
+      font-size: 30px;
     }
   }
 }
